@@ -1,0 +1,9 @@
+## usage instruction
+
+#this is the browser url of the api gateway to invoke the lambda function and kick the sns topic to send the sum of the function to email
+# to change the sum please change the parmaters: Number1 , Number2 value to the decimal value of your liking.
+# for example https://6zbl442pod.execute-api.us-east-1.amazonaws.com/?Number1=10&Number2=50
+https://6zbl442pod.execute-api.us-east-1.amazonaws.com/?Number1=x&Number2=x
+
+# i also invoked the function from the aws cli connected to my account with this command:
+aws lambda invoke --function-name my_function --cli-binary-format raw-in-base64-out --payload '{"Number1": 300, "Number2": 30}' response.json
