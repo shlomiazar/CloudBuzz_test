@@ -21,7 +21,7 @@ resource "aws_sns_topic" "my_tf_sns_topic" {
 resource "aws_sns_topic_subscription" "subscription" {
   topic_arn = aws_sns_topic.my_tf_sns_topic.arn
   protocol  = "email"
-  endpoint  = "azar375@gmail.com"
+  endpoint  = "<YOUR_MAIL>"
 }
 
 resource "aws_lambda_function_event_invoke_config" "terraform_lambda_invoke" {
