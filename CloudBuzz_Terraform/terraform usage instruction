@@ -1,0 +1,15 @@
+this is an instruction to complete the assigement the terraform way!
+this is the changes to make to the files in order to make it work on your own personal aws account.
+
+
+1. in the variable.tf file insert your account id > 
+variable "account_id" {
+        description = "My Account Number"
+        default = "<account_id>"
+}
+
+2. in the terraform.tfvars change to your own access and secret key.
+
+3. in the main.tf on line 24,   endpoint  = "<YOUR_MAIL>" change to the the email you want to subscribe.
+
+4. in the index.py code insert your own account id in the next field:  snsArn = 'arn:aws:sns:us-east-1:<account_id>:testss'
