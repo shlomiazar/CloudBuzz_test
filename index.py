@@ -8,7 +8,7 @@ def SHLOMI(event, context):
     summ = number1 + number2
     
     client = boto3.client('sns')
-    snsArn = 'arn:aws:sns:us-east-1:194180725215:testss'
+    snsArn = 'arn:aws:sns:us-east-1:>account_id>:testss'
     message = str(summ)
     
     try:
