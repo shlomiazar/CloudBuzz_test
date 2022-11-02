@@ -27,11 +27,6 @@ resource "aws_sns_topic_subscription" "subscription" {
 resource "aws_lambda_function_event_invoke_config" "terraform_lambda_invoke" {
   function_name = aws_lambda_function.terraform_lambda_func.function_name
 
-  destination_config {
-    on_failure {
-      destination = aws_sns_topic.my_tf_sns_topic.arn
-    }
-
     on_success {
       destination = aws_sns_topic.my_tf_sns_topic.arn
     }
